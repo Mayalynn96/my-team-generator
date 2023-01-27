@@ -7,8 +7,8 @@ const fs = require("fs")
 
 const team = [];
 let manager = '';
-// const engineers = [];
-// const interns = [];
+const engineers = [];
+const interns = [];
 
 
 const start = async () => {
@@ -58,12 +58,49 @@ const addTeamMembers = async () => {
         },
     ])
     if (employee.type === "None, I'm all done building my team!") {
-        // doneCreatingTeam()
+        doneCreatingTeam()
     } else if (employee.type === "Engineer") {
         // addEngineer()
     } else if (employee.type === "Intern") {
         // addIntern()
     }
+}
+
+const doneCreatingTeam = async () => {
+    const question = await showCurrentList()
+    const user = await inquirer.prompt([
+        {
+            type: 'confirm',
+            name: 'choice',
+            message: 
+`Are you sure? \n
+${question} \n
+`
+        }
+    ])
+    const text = generateHtml(team)
+    if (user.choice) {
+        console.log('Goodbye!');
+        fs.writeFile('./dist/index.html', text, (err) => {
+            if(err){
+                console.log(err)
+            }
+        })
+    } else {
+        addTeamMembers()
+    }
+}
+
+const showCurrentList = async () => {
+    let allEngineers = engineers.join(', ');
+    let allInterns = interns.join(', ');
+    text = 
+`Here is a list of your current members: \n
+Manager: ${manager}
+Engineers: ${allEngineers}
+Interns:  ${allInterns}
+`
+    return text
 }
 
 
