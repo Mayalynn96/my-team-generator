@@ -1,5 +1,6 @@
 body {
-    background-color: #e5e0d3;
+    /* background-color: #e5e0d3; */
+    background-image: url(https://t3.ftcdn.net/jpg/03/01/35/54/360_F_301355492_a8MJpnsU9oS1M05g7dXDuY1v9RsIvcWL.jpg);
     color: #7a2f69;
 }
 
@@ -11,6 +12,14 @@ header {
     margin: 20px;
 }
 
+header h1{
+    font-size: 50px;
+}
+
+.card-header{
+    color: #e5e0d3;
+}
+
 .team-area {
     width: 100%;
     display: flex;
@@ -19,11 +28,18 @@ header {
 
 
 .card {
-    background-color: #d8b0c0;
+    background-color: #a84f73;
     width: 40%;
     margin: 5px;
 }
 
 .list-group, .list-group-item {
  background-color: #e5e0d3;
+}
+
+@media screen and (max-width: 990px) {
+    .card {
+        width: 100%;
+        margin: 5px 5vw;
+    }
 }

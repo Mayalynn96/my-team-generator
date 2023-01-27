@@ -1,7 +1,7 @@
-const generateHtml = require("./util/generateHtml.js")
-const Engineer = require("./lib/Engineer.js")
-const Intern = require("./lib/Intern.js")
-const Manager = require("./lib/Manager.js")
+const generateHtml = require("./assets/util/generateHtml.js")
+const Engineer = require("./assets/lib/Engineer.js")
+const Intern = require("./assets/lib/Intern.js")
+const Manager = require("./assets/lib/Manager.js")
 const inquirer = require("inquirer")
 const fs = require("fs")
 
