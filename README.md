@@ -42,8 +42,6 @@ After cloning the repos and installing all the npm packages open index.js in you
 
 This project is covered under the MIT license.
 
-![Gif showing passing tests](./assets/gifs/passingTests.gif)
-
 ## Credit
 
 N/A
@@ -51,6 +49,8 @@ N/A
 ## Test
 
 passes all 17 tests in 4 suits
+
+![Gif showing passing tests](./assets/gifs/passingTests.gif)
 
 ## Contributing
 
