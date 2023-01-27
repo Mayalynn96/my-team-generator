@@ -48,6 +48,7 @@ const start = async () => {
 
 start()
 
+// gives the user the choice to add an engineer, add an intern or quite and generate html
 const addTeamMembers = async () => {
     const employee = await inquirer.prompt([
         {
@@ -66,6 +67,7 @@ const addTeamMembers = async () => {
     }
 }
 
+// makes sure the user is done, shows the current list and generates html or returns to addTeamMember
 const doneCreatingTeam = async () => {
     const question = await showCurrentList()
     const user = await inquirer.prompt([
@@ -91,6 +93,7 @@ ${question} \n
     }
 }
 
+// promts questions and adds engineer
 const addEngineer = async () => {
     console.log("You chose to add and Engineer")
     const employee = await inquirer.prompt([
@@ -122,6 +125,7 @@ const addEngineer = async () => {
     addTeamMembers()
 }
 
+// promts questions and adds intern
 const addIntern = async () => {
     console.log("You chose to add and Intern")
     const employee = await inquirer.prompt([
@@ -153,6 +157,7 @@ const addIntern = async () => {
     addTeamMembers()
 }
 
+// Generating a nice list of all current teammembers
 const showCurrentList = async () => {
     let allEngineers = engineers.join(', ');
     let allInterns = interns.join(', ');

@@ -34,11 +34,15 @@ If none of those files are available or there aren't any dependencies listed in 
 
 ## Usage
 
-After cloning the repos and installing all the npm packages open index.js in your terminal and run node index.js. First it will ask for the managers information before it lets the user choose between adding an engineer, adding an intern or finish the team and generating the html file..
+After cloning the repos and installing all the npm packages open index.js in your terminal and run node index.js. First it will ask for the managers information before it lets the user choose between adding an engineer, adding an intern or finish the team and generating the html file.
+
+![Gif showing usage](./assets/gifs/generatorInAction.gif)
 
 ## License
 
 This project is covered under the MIT license.
+
+![Gif showing passing tests](./assets/gifs/passingTests.gif)
 
 ## Credit
 
