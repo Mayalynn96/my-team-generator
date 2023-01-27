@@ -60,9 +60,9 @@ const addTeamMembers = async () => {
     if (employee.type === "None, I'm all done building my team!") {
         doneCreatingTeam()
     } else if (employee.type === "Engineer") {
-        // addEngineer()
+        addEngineer()
     } else if (employee.type === "Intern") {
-        // addIntern()
+        addIntern()
     }
 }
 
@@ -89,6 +89,68 @@ ${question} \n
     } else {
         addTeamMembers()
     }
+}
+
+const addEngineer = async () => {
+    console.log("You chose to add and Engineer")
+    const employee = await inquirer.prompt([
+        {
+            type: 'input',
+            name: 'name',
+            message: 'What is their name?',
+        },
+        {
+            type: 'input',
+            name: 'id',
+            message: 'What is their Id?',
+        },
+        {
+            type: 'input',
+            name: 'email',
+            message: 'What is their Email?',
+        },
+        {
+            type: 'input',
+            name: 'github',
+            message: 'What is their GitHub username?',
+        },
+    ])
+    team.push(new Engineer(employee.name, employee.id, employee.email, employee.github))
+    engineers.push((employee.name))
+    const currentList = await showCurrentList();
+    console.log(currentList);
+    addTeamMembers()
+}
+
+const addIntern = async () => {
+    console.log("You chose to add and Intern")
+    const employee = await inquirer.prompt([
+        {
+            type: 'input',
+            name: 'name',
+            message: 'What is their name?',
+        },
+        {
+            type: 'input',
+            name: 'id',
+            message: 'What is their Id?',
+        },
+        {
+            type: 'input',
+            name: 'email',
+            message: 'What is their Email?',
+        },
+        {
+            type: 'input',
+            name: 'school',
+            message: 'What School do they go to?',
+        },
+    ])
+    team.push(new Intern(employee.name, employee.id, employee.email, employee.school))
+    interns.push((employee.name))
+    const currentList = await showCurrentList();
+    console.log(currentList);
+    addTeamMembers()
 }
 
 const showCurrentList = async () => {
