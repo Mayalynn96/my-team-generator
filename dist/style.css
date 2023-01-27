@@ -1,0 +1,29 @@
+body {
+    background-color: #e5e0d3;
+    color: #7a2f69;
+}
+
+a, a:hover{
+ color: #7a2f69;
+}
+
+header {
+    margin: 20px;
+}
+
+.team-area {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.card {
+    background-color: #d8b0c0;
+    width: 40%;
+    margin: 5px;
+}
+
+.list-group, .list-group-item {
+ background-color: #e5e0d3;
+}
